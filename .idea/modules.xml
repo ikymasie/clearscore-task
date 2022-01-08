@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ClearScore.iml" filepath="$PROJECT_DIR$/.idea/modules/ClearScore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ClearScore.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ClearScore.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clearscorelib/ClearScore.clearscorelib.iml" filepath="$PROJECT_DIR$/.idea/modules/clearscorelib/ClearScore.clearscorelib.iml" />
+    </modules>
+  </component>
+</project>
