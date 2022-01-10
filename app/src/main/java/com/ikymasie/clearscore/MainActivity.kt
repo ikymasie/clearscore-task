@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var refresher: SwipeRefreshLayout
     private lateinit var containerOutline: ConstraintLayout
     private lateinit var tvTitle: TextView
+    private lateinit var tvSubtitle: TextView
+    private lateinit var tvInstructions: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +63,8 @@ class MainActivity : AppCompatActivity() {
         tvMainCircleText = findViewById(R.id.tv_mainCircleText)
         containerOutline = findViewById(R.id.container_outline)
         tvTitle = findViewById(R.id.tv_title)
+        tvSubtitle = findViewById(R.id.tv_subtitle)
+        tvInstructions = findViewById(R.id.tv_instructionText)
         tvMainCircleText.setCharacterLists(TickerUtils.provideNumberList()) // required
         tvMainCircleText.animationDuration = 1500
         dvDonutView = findViewById(R.id.dv_donutView)
@@ -147,6 +151,9 @@ class MainActivity : AppCompatActivity() {
         snackbar.show()
     }
 
+    /**
+     * a function to navigate to next activity using shared element transitions
+     * */
     private fun onTapDetail(){
         var intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("data", reportViewModel.currentCreditReport.value)
@@ -160,6 +167,12 @@ class MainActivity : AppCompatActivity() {
         val titlePair = UtilPair.create<View?, String?>(tvTitle,
             getString(R.string.tr_title))
 
+        val subTitlePair = UtilPair.create<View?, String?>(tvSubtitle,
+            getString(R.string.tr_subtitle))
+
+        val instructionPair = UtilPair.create<View?, String?>(tvInstructions,
+            getString(R.string.tr_instructions))
+
         val topTextPair = UtilPair.create<View, String>(tvTopCircleText,
             getString(R.string.tr_top_text_circle))
 
@@ -170,7 +183,9 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.tr_top_text_circle))
 
         val options = ActivityOptions.makeSceneTransitionAnimation(this,donutPair,
-            topTextPair, mainTextPair, bottomTextPair, outlinePair, titlePair)
+            topTextPair, mainTextPair, bottomTextPair, outlinePair, titlePair, subTitlePair,
+            instructionPair
+        )
 
         startActivity(intent, options.toBundle())
     }
