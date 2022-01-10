@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ClearScore</string>
+    <string name="app_name">ClearScore Demo</string>
     <string name="top_circle_text_value">Your credit score is</string>
     <string name="bottom_circle_default_value" />
     <string name="main_circle_default_value">-</string>

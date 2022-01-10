@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.tr_top_text_circle))
 
         val options = ActivityOptions.makeSceneTransitionAnimation(this,donutPair,
-            topTextPair, mainTextPair, bottomTextPair)
+            topTextPair, mainTextPair, bottomTextPair, outlinePair, titlePair)
 
         startActivity(intent, options.toBundle())
     }
