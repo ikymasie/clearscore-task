@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="280dp"
+    android:background="@drawable/display_circle"
+    android:padding="6dp">
+
+    <app.futured.donut.DonutProgressView
+        android:id="@+id/dv_donutView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:donut_animateChanges="true"
+        app:donut_animationDuration="1500"
+        app:donut_bgLineColor="@android:color/transparent"
+        app:donut_gapAngle="360"
+        app:donut_gapWidth="1"
+        app:donut_strokeWidth="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_topCircleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_circle_text_value"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <com.robinhood.ticker.TickerView
+            android:id="@+id/tv_mainCircleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_circle_default_value"
+            android:textColor="#263238"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tv_bottomCircleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_circle_default_value"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

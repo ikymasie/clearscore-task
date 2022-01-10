@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ClearScore</string>
+    <string name="top_circle_text_value">Your credit score is</string>
+    <string name="bottom_circle_default_value" />
+    <string name="main_circle_default_value">-</string>
+    <string name="credit_score_max_prefix">out of %1$s</string>
 </resources>
