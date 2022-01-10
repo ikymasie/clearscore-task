@@ -1,5 +1,7 @@
 package com.ikymasie.clearscorelib
 
+import java.io.Serializable
+
 data class CreditReportInfo (
   val score: Long,
   val scoreBand: Long,
@@ -29,4 +31,4 @@ data class CreditReportInfo (
   val equifaxScoreBand: Long,
   val equifaxScoreBandDescription: String,
   val daysUntilNextReport: Long
-)
+):  Serializable
